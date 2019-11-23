@@ -1,0 +1,22 @@
+{
+  "name": "parcial_final",
+  "version": "1.0.0",
+  "description": "Parcial final de programacion web",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChristianCB16/Parcial_Final.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChristianCB16/Parcial_Final/issues"
+  },
+  "homepage": "https://github.com/ChristianCB16/Parcial_Final#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
