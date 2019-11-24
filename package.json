@@ -18,5 +18,6 @@
   "homepage": "https://github.com/ChristianCB16/Parcial_Final#readme",
   "dependencies": {
     "express": "^4.17.1"
-  }
+  },
+  "devDependencies": {}
 }

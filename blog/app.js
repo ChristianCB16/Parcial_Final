@@ -6,16 +6,28 @@ var logger = require('morgan');
 var sassMiddleware = require('node-sass-middleware');
 var mongoose = require('mongoose');
 var debug = require('debug')('blog:database');
-var database = require("./bin/database");
-var app = express(); 
 
 
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
-var app = express();
-database.connectDB();
+mongoose.connect(process.env.MONGO_URI, {
+  useCreateIndex: true,
+  useNewUrlParser: true,
+  useUnifiedTopology: true 
+})
+  .then(() => {
+    debug("success Coneccted to database")
+  })
+  .catch((err) => {
+    debug(err);
+    process.exit(1);
+  });
+
+mongoose.set('debug',process.env.NODE_ENV === 'development');
+
+var app = express(); 
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
